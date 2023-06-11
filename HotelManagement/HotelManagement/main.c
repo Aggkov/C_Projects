@@ -6,22 +6,22 @@
 
 
 int main() {
-	char* hotelNames2[ROW];
+	char* hotelNames[ROW];
 	char nameBuffer[50];
 	for (int i = 0; i < ROW; i++) {
 		printf("Enter hotel name: ");
 		gets(nameBuffer);
 		size_t size = strlen(nameBuffer);
-		hotelNames2[i] = malloc(sizeof(char) * size + 1);
-		if (hotelNames2[i] == NULL) {
+		hotelNames[i] = malloc(sizeof(char) * size + 1);
+		if (hotelNames[i] == NULL) {
 			exit(1);
 		}
-		strcpy_s(hotelNames2[i], size + 1, nameBuffer);
+		strcpy_s(hotelNames[i], size + 1, nameBuffer);
 		
 	}
 	//printf("%s", hotelNames2[0]); // dynamic array prints first element
 	for (int i = 0; i < ROW; i++) {
-		printf("%s ", hotelNames2[i]);
+		printf("%s ", hotelNames[i]);
 	}
 	printf("\n");
 	
@@ -29,8 +29,8 @@ int main() {
 	int hotelArrayVisitorsPerMonth[ROW][COLUMN];
 	initialize2DArrayOfVisitors(hotelArrayVisitorsPerMonth);
 	printArr(hotelArrayVisitorsPerMonth, ROW, COLUMN);
-	printYearlyVisitsOfAllHotelsWithDynamicCharArray(hotelNames2, hotelArrayVisitorsPerMonth);
-	printHotelWithMinimumVisitors(hotelArrayVisitorsPerMonth, hotelNames2);
+	printYearlyVisitsOfAllHotelsWithDynamicCharArray(hotelNames, hotelArrayVisitorsPerMonth);
+	printHotelWithMinimumVisitors(hotelArrayVisitorsPerMonth, hotelNames);
 
 	return 0;
 }
