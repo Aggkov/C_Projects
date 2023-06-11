@@ -19,13 +19,10 @@ int main() {
 		strcpy_s(hotelNames[i], size + 1, nameBuffer);
 		
 	}
-	//printf("%s", hotelNames2[0]); // dynamic array prints first element
 	for (int i = 0; i < ROW; i++) {
 		printf("%s ", hotelNames[i]);
 	}
 	printf("\n");
-	
-
 	int hotelArrayVisitorsPerMonth[ROW][COLUMN];
 	initialize2DArrayOfVisitors(hotelArrayVisitorsPerMonth);
 	printArr(hotelArrayVisitorsPerMonth, ROW, COLUMN);
