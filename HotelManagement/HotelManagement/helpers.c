@@ -65,9 +65,7 @@ void printHotelWithMinimumVisitors(int numOfVisitors[ROW][COLUMN], char* hotels[
 	char hotelBuffer[50];
 	for (int i = 0; i < ROW; i++) {
 		if (i == index) {
-			//for (int j = 0; j < strlen(hotels[i]); j++) {
 			strcpy_s(hotelBuffer, strlen(hotels[i]) + 1, hotels[i]);
-			//}
 			break;
 		}
 	}
